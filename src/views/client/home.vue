@@ -22,7 +22,7 @@
             </div> -->
         </div>
 
-        <img class="w-full" src="https://cosm-hync-wb1.vercel.app/static/media/RoundButtons.dbd6f1e04fe79f6e57ab.PNG" alt="img">
+        <img class="w-full hidden md:block" src="https://cosm-hync-wb1.vercel.app/static/media/RoundButtons.dbd6f1e04fe79f6e57ab.PNG" alt="img">
 
         <div class="w-full flex-col gap-5">
             <div class="py-10 flex items-center">
@@ -121,7 +121,7 @@
                 </div>
             </div>
             <div class="w-full text-center pt-10">
-                <a href="#"
+                <a href="https://cosm-hync-wb1.vercel.app/productsList"
                     class="button-like select-none p-4 py-3 bg-[#7A00E6] rounded-md text-white text-center w-[10rem] cursor-pointer">
                     Consulter tous les produits
                 </a>

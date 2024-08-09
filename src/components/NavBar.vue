@@ -1,5 +1,5 @@
 <template>
-    <nav class="p-4 px-0 bg-white text-gray-900 font-bold">
+    <nav class="p-4 lg:px-0 bg-white text-gray-900 font-bold">
         <!-- LARGE SCREEN NAVBAR -->
         <div class="hidden lg:flex justify-between items-center">
             <div class="flex items-center gap-2">
@@ -70,11 +70,11 @@
                 </svg>
             </button>
 
-            <h1 class="text-2xl">LOGO</h1>
+            <img src="../assets/logo.jpeg" alt="" class="w-20 h-full">
 
             <!-- MOBILE SEARCH ICON -->
             <div class="flex items-center gap-2">
-                <input type="text" id="searchInputMobile"
+                <!-- <input type="text" id="searchInputMobile"
                     class="hidden p-2 text-xs text-black rounded border border-[#7A00E6] w-[5rem]"
                     placeholder="Search...">
 
@@ -84,7 +84,7 @@
                             d="M16.2699 8.7C16.2699 10.4213 15.7112 12.0113 14.7699 13.3013L19.5174 18.0525C19.9862 18.5212 19.9862 19.2825 19.5174 19.7513C19.0487 20.22 18.2874 20.22 17.8187 19.7513L13.0712 15C11.7812 15.945 10.1912 16.5 8.46992 16.5C4.16117 16.5 0.669922 13.0088 0.669922 8.7C0.669922 4.39125 4.16117 0.900002 8.46992 0.900002C12.7787 0.900002 16.2699 4.39125 16.2699 8.7ZM8.46992 14.1C11.4512 14.1 13.8699 11.6813 13.8699 8.7C13.8699 5.71875 11.4512 3.3 8.46992 3.3C5.48867 3.3 3.06992 5.71875 3.06992 8.7C3.06992 11.6813 5.48867 14.1 8.46992 14.1Z"
                             fill="#7A00E6" />
                     </svg>
-                </button>
+                </button> -->
             </div>
 
         </div>
