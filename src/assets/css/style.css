@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600&display=swap');
+
+*{
+    /* line-height: 1.25rem; */
+    line-height: 20px;
+    outline: none !important;
+  }
+  html{
+    scroll-behavior: smooth;
+  }
+
+  .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      margin-right: auto;
+      margin-left: auto;
+      /* transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1.0); */
+      transition-duration: 500ms;
+      /* transition-delay: 100ms;  */
+  }
+  @media (min-width: 640px){
+      .container, .container-sm {
+          max-width: 640px;
+      }
+  }
+  @media (min-width: 768px){
+      .container, .container-md, .container-sm {
+          max-width: 768px;
+      }
+  }
+  @media (min-width: 1024px){
+      .container, .container-lg, .container-md, .container-sm {
+          max-width: 1024px;
+      }
+  }
+  @media (min-width: 1280px){
+      .container, .container-lg, .container-md, .container-sm, .container-xl {
+          max-width: 1280px;
+      }
+  }
+  @media (min-width: 1536px){
+      .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+          max-width: 1536px;
+      }
+  }
+
+  .svg_icn{
+    /* height: -webkit-fit-content; */
+    width: -webkit-fit-content;
+    display: flex;
+  }
