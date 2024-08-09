@@ -1,9 +1,10 @@
 <template>
-    <nav class="p-4 px-6 bg-white text-gray-900 font-bold">
+    <nav class="p-4 px-0 bg-white text-gray-900 font-bold">
         <!-- LARGE SCREEN NAVBAR -->
         <div class="hidden lg:flex justify-between items-center">
-            <div class="flex items-center gap-10">
-                <h1 class="text-2xl">LOGO</h1>
+            <div class="flex items-center gap-2">
+                <img src="../assets/logo.jpeg" alt="" class="w-24 h-full">
+                <!-- <h1 class="text-2xl uppercase">hyncos</h1> -->
             </div>
 
             <ul class="flex items-center gap-4 uppercase">
@@ -19,10 +20,10 @@
                 <li class="text-xs"><a href=""
                         class="transition duration-300 focus:outline-none focus:text-[#7A00E6] focus:underline hover:underline hover:text-[#7A00E6]"
                         style="text-underline-offset: 8px;">blog</a></li>
-                <li class="text-xs"><a href=""
+                <li class="text-xs"><a href="https://cosm-hync-wb1.vercel.app/productsList"
                         class="transition duration-300 focus:outline-none focus:text-[#7A00E6] focus:underline hover:underline hover:text-[#7A00E6]"
                         style="text-underline-offset: 8px;">our products</a></li>
-                <li class="text-xs relative flex items-center gap-2">
+                <!-- <li class="text-xs relative flex items-center gap-2">
                     <input type="text" id="searchInput" class="hidden p-2 text-black rounded border border-[#7A00E6]"
                         placeholder="Search...">
 
@@ -45,14 +46,14 @@
                         </svg>
                         <span>Global</span>
                     </a>
-                </li>
+                </li> -->
 
                 <li class="text-xs">
-                    <div
+                    <a href="https://cosm-hync-wb1.vercel.app/login"
                         class="flex gap-2 cursor-pointer px-3 py-2 bg-white items-center transition duration-300 focus:outline-none focus:text-[#7A00E6] focus:underline hover:underline hover:text-[#7A00E6] underline-offset-8">
                         <icn name="exit" class="h-4 w-4 fill-current" />
                         <span class="">sign in</span>
-                    </div>
+                    </a>
                 </li>
             </ul>
         </div>
@@ -150,7 +151,7 @@ export default {
             }
         });
     },
-    methods:{
+    methods: {
         toggleMenu() {
             var x = document.getElementById("side-navbar");
             if (x.classList.contains('hidden')) {
