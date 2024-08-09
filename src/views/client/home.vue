@@ -302,5 +302,16 @@
 <script>
 export default {
     name: 'home',
+    data(){
+        return {
+
+        }
+    },
+    
+    methods:{
+        goTo(payload){
+            this.$router.push({ name: payload });
+        },
+    }
 }
 </script>

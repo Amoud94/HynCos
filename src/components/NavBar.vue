@@ -3,7 +3,7 @@
         <!-- LARGE SCREEN NAVBAR -->
         <div class="hidden lg:flex justify-between items-center">
             <div class="flex items-center gap-2">
-                <img src="../assets/logo.jpeg" alt="" class="w-24 h-full">
+                <img src="../assets/NOURGHALI.png" alt="" class="w-32 h-full">
                 <!-- <h1 class="text-2xl uppercase">hyncos</h1> -->
             </div>
 
@@ -70,7 +70,7 @@
                 </svg>
             </button>
 
-            <img src="../assets/logo.jpeg" alt="" class="w-20 h-full">
+            <img src="../assets/NOURGHALI.png" alt="" class="w-20 h-full">
 
             <!-- MOBILE SEARCH ICON -->
             <div class="flex items-center gap-2">
@@ -159,7 +159,10 @@ export default {
             } else {
                 x.classList.add('hidden');
             }
-        }
+        },
+        goTo(payload){
+            this.$router.push({ name: payload });
+        },
     }
 }
 </script>

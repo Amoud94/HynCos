@@ -21,6 +21,16 @@ const routes = [
         name: "home",
         component: () => import("../views/client/home"),
       },
+      {
+        path: "/produits",
+        name: "produits",
+        component: () => import("../views/client/products"),
+      },
+      {
+        path: "/produits/:id",
+        name: "produits-detail",
+        component: () => import("../views/client/productsDetails"),
+      },
     ],
   },
 
