@@ -8,21 +8,21 @@
             </div>
 
             <ul class="flex items-center gap-4 uppercase">
-                <li class="text-xs "><a href=""
+                <li class="text-xs "><router-link to="/"
                         class="transition duration-300 focus:outline-none focus:text-[#7A00E6] focus:underline hover:underline hover:text-[#7A00E6]"
-                        style="text-underline-offset: 8px;">home</a></li>
-                <li class="text-xs"><a href=""
+                        style="text-underline-offset: 8px;">home</router-link></li>
+                <li class="text-xs"><router-link to="" disabled
                         class="transition duration-300 focus:outline-none focus:text-[#7A00E6] focus:underline hover:underline hover:text-[#7A00E6]"
-                        style="text-underline-offset: 8px;">about</a></li>
-                <li class="text-xs"><a href=""
+                        style="text-underline-offset: 8px;">about</router-link></li>
+                <li class="text-xs"><router-link to="" disabled
                         class="transition duration-300 focus:outline-none focus:text-[#7A00E6] focus:underline hover:underline hover:text-[#7A00E6]"
-                        style="text-underline-offset: 8px;">faq</a></li>
-                <li class="text-xs"><a href=""
+                        style="text-underline-offset: 8px;">faq</router-link></li>
+                <li class="text-xs"><router-link to="" disabled
                         class="transition duration-300 focus:outline-none focus:text-[#7A00E6] focus:underline hover:underline hover:text-[#7A00E6]"
-                        style="text-underline-offset: 8px;">blog</a></li>
-                <li class="text-xs"><a href="https://cosm-hync-wb1.vercel.app/productsList"
+                        style="text-underline-offset: 8px;">blog</router-link></li>
+                <li class="text-xs"><router-link to="/produits"
                         class="transition duration-300 focus:outline-none focus:text-[#7A00E6] focus:underline hover:underline hover:text-[#7A00E6]"
-                        style="text-underline-offset: 8px;">our products</a></li>
+                        style="text-underline-offset: 8px;">our products</router-link></li>
                 <!-- <li class="text-xs relative flex items-center gap-2">
                     <input type="text" id="searchInput" class="hidden p-2 text-black rounded border border-[#7A00E6]"
                         placeholder="Search...">
@@ -92,9 +92,9 @@
         <!-- MOBILE SIDE-MENU -->
         <div class="w-full hidden absolute left-0 top-14 border-ttransition-all z-30" id="side-navbar">
             <div class="flex bg-white w-full flex-col justify-center px-3 pb-5 text-xs uppercase">
-                <a href="#"
+                <router-link to="/"
                     class="block text-gray-900 cursor-pointer py-2 transition duration-300 focus:outline-none focus:text-[#7A00E6] focus:underline hover:underline hover:text-[#7A00E6]"
-                    style="text-underline-offset: 8px;">home</a>
+                    style="text-underline-offset: 8px;">home</router-link>
                 <a href="#"
                     class="block text-gray-900 cursor-pointer py-2 transition duration-300 focus:outline-none focus:text-[#7A00E6] focus:underline hover:underline hover:text-[#7A00E6]"
                     style="text-underline-offset: 8px;">about</a>
@@ -104,9 +104,9 @@
                 <a href="#"
                     class="block text-gray-900 cursor-pointer py-2 transition duration-300 focus:outline-none focus:text-[#7A00E6] focus:underline hover:underline hover:text-[#7A00E6]"
                     style="text-underline-offset: 8px;">blog</a>
-                <a href="https://cosm-hync-wb1.vercel.app/productsList"
+                <router-link to="/produits"
                     class="block text-gray-900 cursor-pointer py-2 transition duration-300 focus:outline-none focus:text-[#7A00E6] focus:underline hover:underline hover:text-[#7A00E6]"
-                    style="text-underline-offset: 8px;">our products</a>
+                    style="text-underline-offset: 8px;">our products</router-link>
                 <a href="https://cosm-hync-wb1.vercel.app/login"
                     class="flex gap-2 cursor-pointer py-2 bg-white items-center transition duration-300 focus:outline-none focus:text-[#7A00E6] focus:underline hover:underline hover:text-[#7A00E6] underline-offset-8">
                     <icn name="exit" class="h-4 w-4 fill-current" />
