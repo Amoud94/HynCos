@@ -1,7 +1,7 @@
 <template>
     <div class="w-full lg:py-10 py-5">
         <nav aria-label="breadcrumb">
-            <ol class="breadcrumb flex hidden lg-block">
+            <ol class="breadcrumb lg:flex hidden">
                 <li class="breadcrumb-item text-gray-600"><a href="#"
                         class="text-gray-600 hover:text-purple-700 mx-2">Produits</a></li>
                 <li class="breadcrumb-item text-gray-600"><a href="#"
