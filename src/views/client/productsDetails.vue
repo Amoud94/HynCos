@@ -17,7 +17,7 @@
             <div class="container px-5 py-24 mx-auto">
                 <div class="lg:w-4/5 mx-auto flex flex-wrap relative">
                     <span class="bg-red-500 font-semibold text-white text-base  px-2 rounded-lg absolute top-5 left-5">
-                    -20 % DE RÉDUCTION
+                    -{{selectedProduct.discount}} % DE RÉDUCTION
                     </span>
                     <img alt="ecommerce"
                         class="lg:w-1/2 w-full object-cover object-center rounded border border-gray-200"
