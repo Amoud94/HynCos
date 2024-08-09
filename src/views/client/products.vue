@@ -2,13 +2,15 @@
     <div class="w-full">
         <div class="lg:py-10 py-5 flex items-center">
             <span class="w-full border-t lg:border-2 border-black"></span>
-            <span class="w-full text-center mx-2 text-lg lg:text-3xl font-base font-[titillium-web-black] uppercase">notre galerie de produits</span>
+            <span
+                class="w-full text-center mx-2 text-lg lg:text-3xl font-base font-[titillium-web-black] uppercase">notre
+                galerie de produits</span>
             <span class="w-full border-t lg:border-2 border-black"></span>
         </div>
         <div class="w-full flex items-center lg:gap-5 gap-3 justify-evenly flex-wrap lg:my-10">
             <div class="grow max-w-[40%] lg:max-w-[20%] inline-flex lg:min-w-[20%] rounded-md hover:border-2 hover:border hover:border-yellow-600 overflow-hidden"
-                v-for="product in products">
-                <a href="#" class="relative bg-white inline-flex items-stretch w-full h-full p-0 box-border">
+                v-for="product in products" @click="goTo({ name: 'produits-detail', params: { id: product.id } })">
+                <div class="cursor-pointer relative bg-white inline-flex items-stretch w-full h-full p-0 box-border">
                     <!-- heart -->
                     <div class="absolute top-[4px] right-[4px] w-[28px] h-[28px] text-center z-10 rounded-full">
                         <div>
@@ -69,7 +71,7 @@
 
                         </div>
                     </div>
-                </a>
+                </div>
             </div>
         </div>
     </div>
@@ -82,6 +84,7 @@ export default {
         return {
             products: [
                 {
+                    "id": "64d4f74e8e33a5f75d2b1a24",
                     "name": "ISDIN ecran solaire FotoUltra Active Unify 50ml - Protection Solaire",
                     "pictures": ["https://makushop.ma/cdn/shop/files/isdn-ecran-solaire-FotoUltra-Active-Unify-50ml-_-ecran-solaire-ISDN---Makushop-1685054781.jpg?v=1685054783"],
                     "video": "https://via.placeholder.com/150/face-cream-video",
@@ -107,6 +110,7 @@ export default {
                                     Sa texture légère et facile à appliquer permet une absorption rapide sans laisser de résidus gras. La teinte universelle s'adapte à la plupart des carnations, offrant un effet naturel et une couverture légère pour un teint unifié et radieux.`
                 },
                 {
+                    "id": "64d4f74e8e33a5f75d2b1a25",
                     "name": "ISDIN Foto Ultra 100 Spot Prevent Fusion Fluid SPF50+ 50ml",
                     "pictures": ["https://www.cavernesante.com/1636-large_default/isdin-ecran-solaire-spot-prevent-spf50-50ml.jpg"],
                     "video": "https://via.placeholder.com/150/lipstick-video",
@@ -130,6 +134,7 @@ export default {
                     "description": `Écran Solaire FotoUltra Spot Prevent offre une protection 3 fois supérieure au minimum requis dans un Écran Solaire SPF50+ contre les rayons UVA, responsables des troubles pigmentaires`
                 },
                 {
+                    "id": "64d4f74e8e33a5f75d2b1a26",
                     "name": "ISDIN FOTOPROTECTOR FUSION WATER 50ML",
                     "pictures": ["https://www.paravitalia.com/wp-content/uploads/2022/09/61dqdOAoUS._AC_SX679_.jpg"],
                     "video": "https://via.placeholder.com/150/foundation-video",
@@ -153,6 +158,7 @@ export default {
                     "description": `Protection solaire pour le visage, adaptée à tous les types de peau Protection solaire pour le visage, adaptée à tous les types de peau`
                 },
                 {
+                    "id": "64d4f74e8e33a5f75d2b1a27",
                     "name": "Fotoprotector ISDIN® Fusion Water SPF 50+ 50ml",
                     "pictures": ["https://veranomedical.com/4364-large_default/fotoprotector-isdin-fusion-water-spf-50-50ml.jpg"],
                     "video": "https://via.placeholder.com/150/blush-video",
@@ -179,6 +185,7 @@ export default {
                                     Sa texture fluide et sans huile convient à toutes les peaux même mixtes ou grasses. Elle est absorbée rapidement et ne laisse aucune trace sur la peau. De plus, elle peut être appliquée sur la peau humide grâce à sa technologie Wet Skin. Ne pique pas les yeux.`
                 },
                 {
+                    "id": "64d4f74e8e33a5f75d2b1a28",
                     "name": "EUCERIN SUN PROTECTION PIGMENT CONTROL ECRAN ANTI-PIGMENT SPF50+ 50ML",
                     "pictures": ["https://angelcare.ma/3559-thickbox_default/eucerin-sun-protection-pigment-control-ecran-anti-pigment-spf50-50ml.jpg"],
                     "video": "https://via.placeholder.com/150/night-serum-video",
@@ -202,6 +209,7 @@ export default {
                     "description": "Eucerin Sun Protection Pigment Control SPF50+ 50 ml est un soin contenant une combinaison de filtres UVA/UVB pour une très haute protection contre les UV, et de la licochalcone A, un antioxydant qui agit sur les radicaux libres générés par les UV et la lumière visible de haute énergie pouvant induire une hyperpigmentation telles que des taches brunes."
                 },
                 {
+                    "id": "64d4f74e8e33a5f75d2b1a29",
                     "name": "SENSILIS SUN SECRET FLUID ECRAN INVISIBLE ANTI-ÂGE SPF50+ 50ML",
                     "pictures": ["https://citymall-para.ma/wp-content/uploads/2022/05/Invisible-1-768x924.jpg"],
                     "video": "https://via.placeholder.com/150/night-serum-video",
@@ -225,6 +233,7 @@ export default {
                     "description": "Cette une émulsion fluide à l’acide hyaluronique est vraiment indispensable pour votre peau sensible !Elle procure l’hydratation nécessaire dont vous avez besoin et enrichie en vitamine E, action antioxydante et Pro-Vita D3, qui favorise la synthèse de la vitamine D."
                 },
                 {
+                    "id": "64d4f74e8e33a5f75d2b1a30",
                     "name": "Sensilis Ecran Solair SPF 50+ 40 Ml",
                     "pictures": ["https://makushop.ma/cdn/shop/products/Sensilis-Sun-Secret-Crema-Solar-Facial-Protectora-y-Antiedad-SPF50_-40-ml-sensilis-1676205170.jpg?v=1679274028"],
                     "video": "https://via.placeholder.com/150/night-serum-video",
@@ -248,6 +257,7 @@ export default {
                     "description": "Sensilis Sun Secret Crème Solaire Visage Protectrice et Anti-Âge SPF50+ 40 ml Emulsion fluide à la texture soyeuse indiquée pour protéger la peau du visage du rayonnement solaire. Sa formule innovante avec DNA Safe Complex et filtres SPF50+ protège du rayonnement solaire et contrecarre le photovieillissement. Particulièrement indiqué pour les phototypes très clairs et les peaux sensibles ou les phototypes clairs en cas d'exposition prolongée. Convient pour prévenir l'apparition de taches. Formule résistante à l'eau, non comédogène et sans paraben. Avis pharmaceutique Il ne doit pas être exposé au soleil directement ou en milieu de journée. Les coups de soleil peuvent être dangereux."
                 },
                 {
+                    "id": "64d4f74e8e33a5f75d2b1a31",
                     "name": "EUCERIN SUN OIL CONTROL SPF 50+ SUN GEL-CRÉME TOUCHER SEC 50 ML",
                     "pictures": ["https://parapharma.ma/44655-medium_default/eucerin-sun-oil-control-spf-50-sun-gel-creme-toucher-sec-50-ml.webp"],
                     "video": "https://via.placeholder.com/150/night-serum-video",
@@ -271,6 +281,7 @@ export default {
                     "description": "Le Gel-Crème toucher sec Oil Control est conçu pour la protection du visage pour les peaux grasses à tendance acnéique.Sa très haute protection SPF50+ anti UVA et UVB protège la peau des effets néfastes du soleil, avec un effet anti-brillance et sans parfum. La protection solaire pour peau grasse  tendance acnéique Eucerin est conforme aux recommandations européennes.Fini sec et mat longue durée.Non comédogène.Peut être appliqué avant le maquillage.Sans parfum.Testé en condition de climats humides.Aide à protéger la peau des taches de pigmentation et du vieillissement cutané prématuré dû au soleil.Tolérance cuanée prouvée cliniquement sur les peaux sensibles à tendance acnéiques. "
                 },
                 {
+                    "id": "64d4f74e8e33a5f75d2b1a32",
                     "name": "Bioderma Photoderm MAX Fluide SPF 100 40ml",
                     "pictures": ["https://citymall-para.ma/wp-content/uploads/2023/05/984781-bioderma-photoderm-max-fluid-spf100-40ml-2-800Wx800H.webp"],
                     "video": "https://via.placeholder.com/150/night-serum-video",
@@ -301,6 +312,7 @@ export default {
                                     Adapté aux peaux normales à mixtes.`
                 },
                 {
+                    "id": "64d4f74e8e33a5f75d2b1a33",
                     "name": "Eucerin SUN CRÈME VISAGE SPF50+",
                     "pictures": ["https://www.gopara.ma/wp-content/uploads/2023/01/1.jpg"],
                     "video": "https://via.placeholder.com/150/night-serum-video",
@@ -328,6 +340,7 @@ export default {
                                     La formule contient également de l’Acid Gylcyrrhétinique qui aide à renforcer les mécanissmes naturels deprotection cellulaire et de reparation de l’ADN de la Peau`
                 },
                 {
+                    "id": "64d4f74e8e33a5f75d2b1a34",
                     "name": "BIODERMA PHOTODERM MAX SPF100 FLUIDE TEINTE CLAIRE 40ML",
                     "pictures": ["https://angelcare.ma/3781-thickbox_default/bioderma-photoderm-max-spf100-creme-teinte-claire-40ml.jpg"],
                     "video": "https://via.placeholder.com/150/night-serum-video",
@@ -356,6 +369,7 @@ export default {
                                     Parfaitement adaptée aux peaux SECHES`
                 },
                 {
+                    "id": "64d4f74e8e33a5f75d2b1a35",
                     "name": "EUCERIN ANTI-PIGMENT SERUM DUO 30ML",
                     "pictures": ["https://angelcare.ma/2280-thickbox_default/eucerin-anti-pigment-serum-duo-30ml-.jpg"],
                     "video": "https://via.placeholder.com/150/night-serum-video",
@@ -380,6 +394,7 @@ export default {
                                     * Evaluation clinique pendant 12 semaines sur 34 volontaires, application conjointe des soins Eucerin® Anti-Pigment Sérum Duo et Soin de Jour SPF30 2 fois par jour pendant 12 semaines.`
                 },
                 {
+                    "id": "64d4f74e8e33a5f75d2b1a36",
                     "name": "Isdn Ecran Solaire FotoUltra Active Unify 50ml",
                     "pictures": ["https://makushop.ma/cdn/shop/files/isdn-ecran-solaire-FotoUltra-Active-Unify-50ml-_-ecran-solaire-ISDN---Makushop-1685054781.jpg?v=1685054783"],
                     "video": "https://via.placeholder.com/150/night-serum-video",
@@ -406,9 +421,12 @@ export default {
                 },
 
             ],
-
-
         }
+    },
+    methods: {
+        goTo(payload) {
+            this.$router.push({ name: payload.name, params: payload.params });
+        },
     }
 }
 </script>

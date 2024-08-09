@@ -160,9 +160,7 @@ export default {
                 x.classList.add('hidden');
             }
         },
-        goTo(payload){
-            this.$router.push({ name: payload });
-        },
+        
     }
 }
 </script>

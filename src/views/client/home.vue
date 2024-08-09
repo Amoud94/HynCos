@@ -27,7 +27,7 @@
         <div class="w-full flex-col gap-5">
             <div class="py-10 flex items-center">
                 <span class="w-full border-t lg:border-2 border-black"></span>
-                <span
+                <span 
                     class="w-full text-center mx-2 text-lg lg:text-3xl font-base font-[titillium-web-black] uppercase">NOS
                     PRODUITS COSMÉTIQUES</span>
                 <span class="w-full border-t lg:border-2 border-black"></span>
@@ -121,10 +121,10 @@
                 </div>
             </div>
             <div class="w-full text-center pt-10">
-                <a href="https://cosm-hync-wb1.vercel.app/productsList"
+                <router-link to="/produits"
                     class="button-like select-none p-4 py-3 bg-[#7A00E6] rounded-md text-white text-center w-[10rem] cursor-pointer">
                     Consulter tous les produits
-                </a>
+                </router-link>
             </div>
 
         </div>
