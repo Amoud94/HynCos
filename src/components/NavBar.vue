@@ -104,14 +104,14 @@
                 <a href="#"
                     class="block text-gray-900 cursor-pointer py-2 transition duration-300 focus:outline-none focus:text-[#7A00E6] focus:underline hover:underline hover:text-[#7A00E6]"
                     style="text-underline-offset: 8px;">blog</a>
-                <a href="#"
+                <a href="https://cosm-hync-wb1.vercel.app/productsList"
                     class="block text-gray-900 cursor-pointer py-2 transition duration-300 focus:outline-none focus:text-[#7A00E6] focus:underline hover:underline hover:text-[#7A00E6]"
                     style="text-underline-offset: 8px;">our products</a>
-                <div
+                <a href="https://cosm-hync-wb1.vercel.app/login"
                     class="flex gap-2 cursor-pointer py-2 bg-white items-center transition duration-300 focus:outline-none focus:text-[#7A00E6] focus:underline hover:underline hover:text-[#7A00E6] underline-offset-8">
                     <icn name="exit" class="h-4 w-4 fill-current" />
                     <span class="">sign in</span>
-                </div>
+                </a>
 
             </div>
         </div>
