@@ -21,6 +21,7 @@ const routes = [
         name: "home",
         component: () => import("../views/client/home"),
       },
+
       {
         path: "/produits",
         name: "produits",
@@ -32,6 +33,17 @@ const routes = [
         component: () => import("../views/client/productsDetails"),
       },
     ],
+  },
+
+  {
+    path: "/login",
+    name: "login",
+    component: () => import("../views/client/login"),
+  },
+  {
+    path: "/register",
+    name: "register",
+    component: () => import("../views/client/register"),
   },
 
 ];

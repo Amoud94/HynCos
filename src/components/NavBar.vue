@@ -108,11 +108,11 @@
                             style="text-underline-offset: 8px;">our products</router-link></li>
 
                     <li class="hidden sm:flex text-xs">
-                        <a href="https://cosm-hync-wb1.vercel.app/login"
+                        <router-link to="/login"
                             class="flex gap-2 cursor-pointer px-3 py-2 bg-white items-center transition duration-300 focus:outline-none focus:text-[#7A00E6] focus:underline hover:underline hover:text-[#7A00E6] underline-offset-8">
                             <icn name="exit" class="h-4 w-4 fill-current" />
                             <span class="">sign in</span>
-                        </a>
+                        </router-link>
                     </li>
                 </ul>
 
@@ -150,11 +150,11 @@
 
 
                                 <li class="text-xs px-3 py-2">
-                                    <a href="https://cosm-hync-wb1.vercel.app/login"
+                                    <router-link to="/login"
                                         class="flex gap-2 cursor-pointer items-center transition duration-300 focus:outline-none focus:text-[#7A00E6] focus:underline hover:underline hover:text-[#7A00E6] underline-offset-8">
                                         <icn name="exit" class="h-4 w-4 fill-current" />
                                         <span class="">sign in</span>
-                                    </a>
+                                    </router-link>
                                 </li>
                             </ul>
                         </div>

@@ -1,10 +1,12 @@
 <template>
     <div class="flex flex-col w-full gap-10">
 
-        <div class="w-full relative">
+        <Slider />
+        
+         <!--<div class="w-full relative">
             <img src="https://www.doitinparis.com/files/2019/beaute/adresses-beaute/instituts-de-beaute/10/source-beaute-green/thumbs-1180x525/source-beaute-green.webp"
                 class="w-full object-cover  h-[20rem] lg:h-full">
-            <!-- <div
+            <div
                 class="w-11/12 mx-auto bg-white rounded-md absolute inset-x-0 bottom-0 p-4 px-6 flex flex-col justify-between gap-4 lg:w-5/12 lg:bottom-auto lg:mx-0 lg:inset-x-auto lg:left-[5%] lg:top-[10%]">
                 <div class="font-bold text-3xl w-3/4 lg:w-3/4 leading-[50px]">Journée des maladies rares 2024 : L'équité
                     en
@@ -19,15 +21,16 @@
                     class="button-like select-none p-4 py-3 bg-[#7A00E6] rounded-md text-white text-center w-[10rem] cursor-pointer">En
                     savoir plus
                 </a>
-            </div> -->
-        </div>
+            </div> 
+        </div>-->
 
-        <img class="w-full hidden md:block" src="https://cosm-hync-wb1.vercel.app/static/media/RoundButtons.dbd6f1e04fe79f6e57ab.PNG" alt="img">
+        <img class="w-full hidden md:block"
+            src="https://cosm-hync-wb1.vercel.app/static/media/RoundButtons.dbd6f1e04fe79f6e57ab.PNG" alt="img">
 
         <div class="w-full flex-col gap-5">
             <div class="py-10 flex items-center">
                 <span class="w-full border-t lg:border-2 border-black"></span>
-                <span 
+                <span
                     class="w-full text-center mx-2 text-lg lg:text-3xl font-base font-[titillium-web-black] uppercase">NOS
                     PRODUITS COSMÉTIQUES</span>
                 <span class="w-full border-t lg:border-2 border-black"></span>
@@ -125,6 +128,32 @@
                     class="button-like select-none p-4 py-3 bg-[#7A00E6] rounded-md text-white text-center w-[10rem] cursor-pointer">
                     Consulter tous les produits
                 </router-link>
+            </div>
+
+        </div>
+
+        <div class="container mx-auto w-full overflow-hidden relative">
+            <div class="py-10 flex items-center">
+                <span class="w-full border-t lg:border-2 border-black"></span>
+                <span
+                    class="w-full text-center mx-2 text-lg lg:text-3xl font-base font-[titillium-web-black] uppercase">NOS
+                    BEST SELERS</span>
+                <span class="w-full border-t lg:border-2 border-black"></span>
+            </div>
+
+            <div class="carousel-items flex items-center justify-center" style="width: fit-content; animation: carouselAnim 10s infinite alternate linear;">
+
+                <div class="carousel-focus flex items-center flex-col justify-between relative bg-white mx-5 px-4 py-3 my-5 border rounded-lg md:w-[20vw] h-[28rem]" v-for="product in fav_products">
+                    <!-- <button class="absolute top-0 right-0 bg-teal-400 rounded-full px-1 py-0 font-bold text-lg">+</button> -->
+                    <span class="text-gray-900 font-bold text-xl mb-3 text-center line-clamp-2">{{ product.name }}</span>
+                    <img class="h-40 w-40 rounded-full shadow-2xl"
+                        :src="product.pictures[0]" alt="Img">
+                    <p class="mt-3 text-sm text-gray-600 text-justify line-clamp-4">{{product.description}}</p>
+                    <button
+                        class="mt-4 mb-2  bg-[#7A00E6] rounded-full px-12 py-1 text-gray-100 font-semibold hover:bg-teal-300 focus:outline-none">Consulter</button>
+                </div>
+
+
             </div>
 
         </div>
@@ -300,18 +329,228 @@
 </template>
 
 <script>
+import Slider from '@/components/Slider.vue'
+
 export default {
     name: 'home',
-    data(){
+    components:{Slider},
+    data() {
         return {
-
+            fav_products: [
+                {
+                    "id": "64d4f74e8e33a5f75d2b1a24",
+                    "name": "ISDIN ecran solaire FotoUltra Active Unify 50ml - Protection Solaire",
+                    "pictures": ["https://makushop.ma/cdn/shop/files/isdn-ecran-solaire-FotoUltra-Active-Unify-50ml-_-ecran-solaire-ISDN---Makushop-1685054781.jpg?v=1685054783"],
+                    "video": "https://via.placeholder.com/150/face-cream-video",
+                    "category": "Cosmetics",
+                    "owner": {
+                        "id": "owner123",
+                        "name": "ISDIN"
+                    },
+                    "price": 250,
+                    "oldPrice": 300,
+                    "stars": 4.5,
+                    "sales": 25,
+                    "discount": 17,
+                    "comments": [
+                        {
+                            "username": "jane_doe",
+                            "message": "Amazing product! My skin has never looked better."
+                        }
+                    ],
+                    "support": 150,
+                    "description": `ISDIN ecran solaire FotoUltra Active Unify , une crème solaire teintée innovante qui offre une protection solaire efficace tout en unifiant le teint de votre peau. Cette formule légère et non grasse combine une haute protection solaire SPF 50+ avec des pigments colorés pour camoufler les imperfections et uniformiser le teint.
+                                    FotoUltra Active Unify Color aide à prévenir les dommages causés par les rayons UVA et UVB, tels que les coups de soleil et le vieillissement prématuré de la peau. En plus de sa protection solaire avancée, cette crème teintée contient des ingrédients dépigmentants qui aident à réduire les taches pigmentaires et à uniformiser le teint, donnant ainsi à votre peau un aspect plus lumineux et homogène.
+                                    Sa texture légère et facile à appliquer permet une absorption rapide sans laisser de résidus gras. La teinte universelle s'adapte à la plupart des carnations, offrant un effet naturel et une couverture légère pour un teint unifié et radieux.`
+                },
+                {
+                    "id": "64d4f74e8e33a5f75d2b1a25",
+                    "name": "ISDIN Foto Ultra 100 Spot Prevent Fusion Fluid SPF50+ 50ml",
+                    "pictures": ["https://www.cavernesante.com/1636-large_default/isdin-ecran-solaire-spot-prevent-spf50-50ml.jpg"],
+                    "video": "https://via.placeholder.com/150/lipstick-video",
+                    "category": "Cosmetics",
+                    "owner": {
+                        "id": "owner123",
+                        "name": "ISDIN"
+                    },
+                    "price": 250,
+                    "oldPrice": 300,
+                    "stars": 4.5,
+                    "sales": 25,
+                    "discount": 17,
+                    "comments": [
+                        {
+                            "username": "makeup_guru",
+                            "message": "The perfect red lipstick. Stays on all day!"
+                        }
+                    ],
+                    "support": 200,
+                    "description": `Écran Solaire FotoUltra Spot Prevent offre une protection 3 fois supérieure au minimum requis dans un Écran Solaire SPF50+ contre les rayons UVA, responsables des troubles pigmentaires`
+                },
+                {
+                    "id": "64d4f74e8e33a5f75d2b1a26",
+                    "name": "ISDIN FOTOPROTECTOR FUSION WATER 50ML",
+                    "pictures": ["https://www.paravitalia.com/wp-content/uploads/2022/09/61dqdOAoUS._AC_SX679_.jpg"],
+                    "video": "https://via.placeholder.com/150/foundation-video",
+                    "category": "Cosmetics",
+                    "owner": {
+                        "id": "owner124",
+                        "name": "ISDIN"
+                    },
+                    "price": 255,
+                    "oldPrice": 382.50,
+                    "stars": 4.3,
+                    "sales": 180,
+                    "discount": 33,
+                    "comments": [
+                        {
+                            "username": "beauty_lover",
+                            "message": "Great coverage and feels lightweight!"
+                        }
+                    ],
+                    "support": 120,
+                    "description": `Protection solaire pour le visage, adaptée à tous les types de peau Protection solaire pour le visage, adaptée à tous les types de peau`
+                },
+                {
+                    "id": "64d4f74e8e33a5f75d2b1a27",
+                    "name": "Fotoprotector ISDIN® Fusion Water SPF 50+ 50ml",
+                    "pictures": ["https://veranomedical.com/4364-large_default/fotoprotector-isdin-fusion-water-spf-50-50ml.jpg"],
+                    "video": "https://via.placeholder.com/150/blush-video",
+                    "category": "Cosmetics",
+                    "owner": {
+                        "id": "owner125",
+                        "name": "ISDIN"
+                    },
+                    "price": 220,
+                    "oldPrice": 300,
+                    "stars": 4.7,
+                    "sales": 220,
+                    "discount": 15,
+                    "comments": [
+                        {
+                            "username": "rosy_cheeks",
+                            "message": "Adds the perfect pop of color!"
+                        }
+                    ],
+                    "support": 180,
+                    "description": `Protection solaire pour le visage, adaptée à tous les types de peau.
+                                    Fotoprotector ISDIN® Fusion Water SPF50+ est un écran solaire à l'indice de protection élevé à base d'eau offrant une protection invisible et fraîche à votre visage.
+                                    Cette protection solaire, au toucher soyeux, protège la peau des rayons UVB, UVA et IR-A et offre une sensation de fraîcheur à votre peau. Elle est également une excellente base de maquillage, idéal pour un usage quotidien.
+                                    Sa texture fluide et sans huile convient à toutes les peaux même mixtes ou grasses. Elle est absorbée rapidement et ne laisse aucune trace sur la peau. De plus, elle peut être appliquée sur la peau humide grâce à sa technologie Wet Skin. Ne pique pas les yeux.`
+                },
+                {
+                    "id": "64d4f74e8e33a5f75d2b1a28",
+                    "name": "EUCERIN SUN PROTECTION PIGMENT CONTROL ECRAN ANTI-PIGMENT SPF50+ 50ML",
+                    "pictures": ["https://angelcare.ma/3559-thickbox_default/eucerin-sun-protection-pigment-control-ecran-anti-pigment-spf50-50ml.jpg"],
+                    "video": "https://via.placeholder.com/150/night-serum-video",
+                    "category": "Cosmetics",
+                    "owner": {
+                        "id": "owner126",
+                        "name": "EUCERIN"
+                    },
+                    "price": 209.04,
+                    "oldPrice": 312,
+                    "stars": 4.9,
+                    "sales": 300,
+                    "discount": 33,
+                    "comments": [
+                        {
+                            "username": "nightowl",
+                            "message": "Woke up with glowing skin after using this!"
+                        }
+                    ],
+                    "support": 210,
+                    "description": "Eucerin Sun Protection Pigment Control SPF50+ 50 ml est un soin contenant une combinaison de filtres UVA/UVB pour une très haute protection contre les UV, et de la licochalcone A, un antioxydant qui agit sur les radicaux libres générés par les UV et la lumière visible de haute énergie pouvant induire une hyperpigmentation telles que des taches brunes."
+                },
+                {
+                    "id": "64d4f74e8e33a5f75d2b1a29",
+                    "name": "SENSILIS SUN SECRET FLUID ECRAN INVISIBLE ANTI-ÂGE SPF50+ 50ML",
+                    "pictures": ["https://citymall-para.ma/wp-content/uploads/2022/05/Invisible-1-768x924.jpg"],
+                    "video": "https://via.placeholder.com/150/night-serum-video",
+                    "category": "Cosmetics",
+                    "owner": {
+                        "id": "owner126",
+                        "name": "SENSILIS"
+                    },
+                    "price": 218.70,
+                    "oldPrice": 364.50,
+                    "stars": 4.9,
+                    "sales": 300,
+                    "discount": 33,
+                    "comments": [
+                        {
+                            "username": "nightowl",
+                            "message": "Woke up with glowing skin after using this!"
+                        }
+                    ],
+                    "support": 210,
+                    "description": "Cette une émulsion fluide à l’acide hyaluronique est vraiment indispensable pour votre peau sensible !Elle procure l’hydratation nécessaire dont vous avez besoin et enrichie en vitamine E, action antioxydante et Pro-Vita D3, qui favorise la synthèse de la vitamine D."
+                },
+                {
+                    "id": "64d4f74e8e33a5f75d2b1a30",
+                    "name": "Sensilis Ecran Solair SPF 50+ 40 Ml",
+                    "pictures": ["https://makushop.ma/cdn/shop/products/Sensilis-Sun-Secret-Crema-Solar-Facial-Protectora-y-Antiedad-SPF50_-40-ml-sensilis-1676205170.jpg?v=1679274028"],
+                    "video": "https://via.placeholder.com/150/night-serum-video",
+                    "category": "Cosmetics",
+                    "owner": {
+                        "id": "owner126",
+                        "name": "SENSILIS"
+                    },
+                    "price": 170.00,
+                    "oldPrice": 300.00,
+                    "stars": 4.9,
+                    "sales": 300,
+                    "discount": 43,
+                    "comments": [
+                        {
+                            "username": "nightowl",
+                            "message": "Woke up with glowing skin after using this!"
+                        }
+                    ],
+                    "support": 210,
+                    "description": "Sensilis Sun Secret Crème Solaire Visage Protectrice et Anti-Âge SPF50+ 40 ml Emulsion fluide à la texture soyeuse indiquée pour protéger la peau du visage du rayonnement solaire. Sa formule innovante avec DNA Safe Complex et filtres SPF50+ protège du rayonnement solaire et contrecarre le photovieillissement. Particulièrement indiqué pour les phototypes très clairs et les peaux sensibles ou les phototypes clairs en cas d'exposition prolongée. Convient pour prévenir l'apparition de taches. Formule résistante à l'eau, non comédogène et sans paraben. Avis pharmaceutique Il ne doit pas être exposé au soleil directement ou en milieu de journée. Les coups de soleil peuvent être dangereux."
+                }
+            ],
         }
     },
-    
-    methods:{
-        goTo(payload){
+
+    methods: {
+        goTo(payload) {
             this.$router.push({ name: payload });
         },
     }
 }
 </script>
+
+<style>
+@keyframes carouselAnim {
+    from {
+        transform: translate(0, 0);
+    }
+
+    to {
+        transform: translate(calc(-100% + (6*300px)));
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .container .carousel-items {
+        animation: carouselAnim 60s infinite alternate linear;
+    }
+
+    @keyframes carouselAnim {
+        from {
+            transform: translate(0, 0);
+        }
+
+        to {
+            transform: translate(calc(-100% + (5*100px)));
+        }
+    }
+}
+
+.carousel-focus:hover {
+    transition: all 0.8s;
+    transform: scale(1.1);
+}
+</style>
